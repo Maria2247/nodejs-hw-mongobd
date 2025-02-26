@@ -21,12 +21,11 @@ export const setupServer = () => {
       },
     }),
   );
-  app.get('/', (req, res, next) => {
+  app.get('/', (req, res) => {
     res.status(200).json({
       status: 200,
       message: 'Contacts API works fine!',
     });
-    next();
   });
   app.get('/contacts', async (req, res) => {
     const contacts = await getAllContacts();
