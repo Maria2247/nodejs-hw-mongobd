@@ -35,3 +35,5 @@ const contactsSchema = new Schema(
 );
 
 export const contactsCollection = model('contacts', contactsSchema);
+
+// Fix letter case for filenames
