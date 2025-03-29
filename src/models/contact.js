@@ -1,4 +1,4 @@
-import { model, Schema } from 'mongoose';
+import mongoose, { model, Schema } from 'mongoose';
 
 const contactsSchema = new Schema(
   {
@@ -24,7 +24,7 @@ const contactsSchema = new Schema(
       default: 'personal',
     },
     userId: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'users',
       required: true,
     },
@@ -35,5 +35,3 @@ const contactsSchema = new Schema(
 );
 
 export const contactsCollection = model('contacts', contactsSchema);
-
-// Trigger redeploy to fix case sensitivity issue

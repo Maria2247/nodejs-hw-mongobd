@@ -6,6 +6,7 @@ export const checkUser = async (req, res, next) => {
   if (!userId) {
     throw createHttpError(401, 'User id is missing');
   }
+
   const user = await UsersCollection.findOne(userId);
   if (!user) {
     throw createHttpError(404, 'User not found');
