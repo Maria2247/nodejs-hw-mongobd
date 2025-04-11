@@ -11,7 +11,7 @@ tags:
     description: Operations with Contacts.
 servers:
   - url: http://localhost:3030
-  - url: https://nodejs-hw-mongobd.onrender.com
+  - url: https://hw7-swagger-vw6t.onrender.com
 paths:
   /contacts:
     get:
