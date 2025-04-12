@@ -23,7 +23,7 @@ properties:
     type: string
     example: 'example@abc.com'
   isFavourite:
-    description: 'Wheter the contact is favourite'
+    description: 'Whether the contact is favourite'
     type: boolean
     example: false
   contactType:

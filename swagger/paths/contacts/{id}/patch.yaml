@@ -16,7 +16,36 @@ requestBody:
   content:
     multipart/form-data:
       schema:
-        $ref: ../../../components/schemas/contact.yaml
+        type: object
+        required:
+          - name
+          - phoneNumber
+          - contactType
+        properties:
+          name:
+            description: "Contact's name"
+            type: string
+            example: 'John Wick'
+          phoneNumber:
+            description: "Contact's phone number"
+            type: string
+            example: '+354475555'
+          email:
+            description: "Contact's email"
+            type: string
+            example: 'example@abc.com'
+          isFavourite:
+            description: 'Whether a contact is favourite'
+            type: boolean
+            example: false
+          contactType:
+            description: "Contact's relation"
+            type: string
+            enum: ['work', 'home', 'personal']
+          photo:
+            description: "Contact's photo"
+            type: string
+            format: binary
 responses:
   '200':
     description: Successfully patched a contact
